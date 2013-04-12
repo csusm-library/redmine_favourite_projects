@@ -9,8 +9,8 @@
 
 %>
 
-<h3><%= l('favourite_projects_box')%></h3>
-
+<h3><%= l('favourite_projects_box')%> </h3>
+<div class="manage_favs"><a href="/base/favourite_projects/index">Update this list</a></div>
 <% if (Setting.plugin_redmine_favourite_projects['showDetailedProjectView']) %>
     <% # layout used with permission from RedmineCRM's Favorite projects plugin
        # (http://redminecrm.com/projects/favoriteprojects)
@@ -30,7 +30,7 @@
       <!-- <td><%= project.short_description %></td> -->
 	    <td><%= raw favourite_project_modules_links(project) %></td>
 	    <td align="center"><%= format_date(project.created_on) %></td>
-	    
+
       </tr>
     <% end %>
       </tbody>
